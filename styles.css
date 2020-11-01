@@ -1,0 +1,61 @@
+#toolbar {
+    width: 99%;
+}
+
+#LeftPanel {
+    display: block;
+    float: left;
+    position: fixed;
+    width: 15%;
+}
+
+#content {
+    margin-left: 20%;
+    display: block;
+    width: 80%;
+}
+
+#RightPanel {
+    display: block;
+    position: relative;
+    float: right;
+    width: 20%;
+}
+
+.country {
+    width: 40px;
+}
+
+.menuitem {
+    list-style: none;
+}
+
+.titulo{
+    font-size: 36px;
+    font-weight: bold;
+}
+
+table {
+    width: 100%;
+}
+
+td {
+    width: auto;
+}
+
+ul{
+    padding: 0;
+    margin: 0;
+    margin-left: 10%;
+    width: 99%;
+}
+
+img {
+    width: 100%;
+}
+
+* {
+    padding: 0;
+    margin: 5px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
