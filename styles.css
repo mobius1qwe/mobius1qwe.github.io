@@ -1,5 +1,7 @@
 #toolbar {
     width: 99%;
+    display: flex;
+    position: -webkit-sticky;     
 }
 
 #LeftPanel {
@@ -10,9 +12,10 @@
 }
 
 #content {
-    margin-left: 20%;
+    margin-left: 220px;
     display: block;
-    width: 80%;
+    width: Calc(100% - 220px);
+    height: 800px;
 }
 
 #RightPanel {
@@ -58,4 +61,8 @@ img {
     padding: 0;
     margin: 5px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+iframe {
+    height: 100%;
 }
