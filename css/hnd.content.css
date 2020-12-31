@@ -87,6 +87,18 @@ a.rvts15, span.rvts15 /* Font Style */
  color: #6666ff;
  text-decoration: underline;
 }
+span.rvts16
+{
+ font-size: 120%;
+ font-family: 'Segoe UI';
+}
+a.rvts17, span.rvts17
+{
+ font-size: 120%;
+ font-family: 'Segoe UI';
+ color: #0000ff;
+ text-decoration: underline;
+}
 /* ========== Para Styles ========== */
 p,ul,ol /* Paragraph Style */
 {
