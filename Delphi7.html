@@ -17,7 +17,7 @@
 
 
 
-  
+  <!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=G-8L3DTCVQF0"></script><script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag("js", new Date());gtag("config", "G-8L3DTCVQF0");</script>
 
   <!-- Twitter Card data -->
   <meta name="twitter:card" content="summary">
@@ -75,7 +75,7 @@
       <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>        
     </button>
     <h1>Rest DataWare Components</h1>
-    
+    <img src="_logo.png" alt="logo" class="logo"/>
   </header>
 
   <nav id="panel-left" class="md-nav-expanded">
@@ -170,13 +170,94 @@
                 
 <p></p>
 <p class="rvps2"><span class="rvts12">Passos para a Instalação dos componentes do REST DataWare no Delphi 7:</span></p>
-<p class="rvps2"><span class="rvts11"><br/></span></p>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
 <ol style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: decimal;">
- <li value="1" class="rvps2"><span class="rvts11">Baixe os arquivos do REST DataWare em uma pasta qualquer do seu sistema através do SVN: </span><a class="rvts13" href="https://svn.code.sf.net/p/rest-dataware-componentes/dataware/trunk" target="_blank">Link SVN</a></li>
- <li value="2" class="rvps2"><span class="rvts11"><br/></span></li>
+ <li value="1" class="rvps4"><span class="rvts11">Baixe os arquivos do REST DataWare em uma pasta qualquer do seu sistema através do SVN: </span><a class="rvts13" href="https://svn.code.sf.net/p/rest-dataware-componentes/dataware/trunk" target="_blank">Link SVN</a></li>
+ <li value="2" class="rvps4"><span class="rvts11">Abra o Delphi 7 e na opção Component &gt; Install Packages procure pelo Indy como mostra na imagem </span><span class="rvts11">e, em seguida, clique em Remove:&nbsp;</span><br/><span class="rvts11">&nbsp;</span><img alt="" style="padding : 1px;" src="lib/DefaultProjectOptions.png"></li>
+ <li value="3" class="rvps4"><span class="rvts11">Feche o Delphi pois agora é necessário remover as referências físicas do Indy, vá até a pasta onde você instalou seu Delphi 7 e remova (ou renomeie) os seguintes arquivos:</span></li>
+</ol>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;">
+ <ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+  <li class="rvps4"><span class="rvts17">Bin\indy70.bpl</span></li>
+  <li class="rvps4"><span class="rvts17">Bin\indy70.map</span></li>
+  <li class="rvps4"><span class="rvts17">Bin\dclindy70.bpl</span></li>
+  <li class="rvps4"><span class="rvts17">Bin\dclindy70.map</span></li>
+  <li class="rvps4"><span class="rvts17">Lib\indy.dcp</span></li>
+  <li class="rvps4"><span class="rvts17">Lib\indy.dcu</span></li>
+  <li class="rvps4"><span class="rvts17">Lib\dclindy.dcp</span></li>
+  <li class="rvps4"><span class="rvts17">Lib\dclindy.dcu</span></li>
+  <li class="rvps4"><span class="rvts17">Source\Indy</span></li>
+ </ul>
+</ul>
+<ol style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: decimal;">
+ <li value="4" class="rvps4"><span class="rvts11">Agora na pasta Lib e Lib\Debug, remova todos os arquivos que iniciarem com nome "id", exemplo: "</span><span class="rvts16">idBaseComponent.dcu</span><span class="rvts11">".</span></li>
+ <li value="5" class="rvps4"><span class="rvts11">Feito isso, agora precisamos instalar a versão nova do Indy. Para isso descompacte o arquivo </span><span class="rvts16">indy10.rar</span><span class="rvts11"> localizado em </span><span class="rvts16">\CORE\Extras</span><span class="rvts11"> dentro de onde você baixou seu RDW.</span></li>
+ <li value="6" class="rvps4"><span class="rvts11">Após descompactar, abra o Delphi 7 e agora vamos instalar o Indy10. Todos os arquivos estão dentro da pasta Indy10\trunk, que você descompactou. É de extrema importância </span><span class="rvts16">Seguir a ordem</span><span class="rvts11"> dos passos.</span></li>
+ <ol style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: decimal;">
+  <li value="1" class="rvps4"><span class="rvts11">Os pacotes abaixo deverão ser </span><span class="rvts16">compilados</span><span class="rvts11"> somente:</span></li>
+ </ol>
+</ol>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;">
+ <ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+  <li class="rvps4"><span class="rvts16">\Lib\System\IndySystem70.dpk</span></li>
+  <li class="rvps4"><span class="rvts16">\Lib\Core\IndyCore70.dpk</span></li>
+  <li class="rvps4"><span class="rvts16">\Lib\Protocols\IndyProtocols70.dpk</span></li>
+ </ul>
+</ul>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<ol style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: decimal;">
+ <ol style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: decimal;">
+  <li value="2" class="rvps4"><span class="rvts11">Os pacotes abaixo você irá </span><span class="rvts16">compilar</span><span class="rvts11"> e em seguida </span><span class="rvts16">instalar</span><span class="rvts11">:</span></li>
+ </ol>
+</ol>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;">
+ <ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+  <li class="rvps4"><span class="rvts16">\Lib\Core\dclIndyCore70.dpk</span></li>
+  <li class="rvps4"><span class="rvts16">\Lib\Core\dclIndyProtocols70.dpk</span></li>
+ </ul>
+</ul>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<ol style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: decimal;">
+ <li value="7" class="rvps4"><span class="rvts11">Agora precisamos adicionar ao </span><span class="rvts16">LibraryPath</span><span class="rvts11"> (Tools &gt; Environment Options &gt; Library) o caminho das pastas que serão usadas no processo:</span><br/><img alt="" style="padding : 1px;" src="lib/NewItem3.png"></li>
+ <ol style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: decimal;">
+  <li value="1" class="rvps4"><span class="rvts11">Pastas do Indy que você descompactou em indy10\trunk:</span></li>
+ </ol>
+</ol>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;">
+ <ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+  <li class="rvps4"><span class="rvts16">\Lib\System</span></li>
+  <li class="rvps4"><span class="rvts16">\Lib\Core</span></li>
+  <li class="rvps4"><span class="rvts16">\Lib\Protocols</span></li>
+ </ul>
+</ul>
+<p class="rvps4"><span class="rvts11"><br/></span></p>
+<ol style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: decimal;">
+ <ol style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: decimal;">
+  <li value="2" class="rvps4"><span class="rvts11">Pastas do RDW para conseguir instalar o componente:</span></li>
+ </ol>
+</ol>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;">
+ <ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+  <li class="rvps4"><span class="rvts16">CORE\Source</span></li>
+  <li class="rvps4"><span class="rvts16">CORE\Source\Connectors\FireDAC</span></li>
+  <li class="rvps4"><span class="rvts16">CORE\Source\Connectors\RDWDriver</span></li>
+  <li class="rvps4"><span class="rvts16">CORE\Source\DmDados</span></li>
+  <li class="rvps4"><span class="rvts16">CORE\Source\MemDataSet</span></li>
+  <li class="rvps4"><span class="rvts16">CORE\Source\DCP</span></li>
+  <li class="rvps4"><span class="rvts16">CORE\Source\DCP\Hashes</span></li>
+  <li class="rvps4"><span class="rvts16">CORE\Source\DCP\Ciphers</span></li>
+  <li class="rvps4"><span class="rvts16">CORE\Source\libs</span></li>
+  <li class="rvps4"><span class="rvts16">CORE\Source\libs\JSON</span></li>
+  <li class="rvps4"><span class="rvts16">CORE\Source\libs\Synopse</span></li>
+  <li class="rvps4"><span class="rvts16">CORE\Source\libs\Synopse\static</span></li>
+ </ul>
+</ul>
+<ol style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: decimal;">
+ <li value="8" class="rvps4"><span class="rvts11">Feito todos esses passos, agora basta abrir o projeto </span><span class="rvts16">resteasyobjectsCORE.dpk</span><span class="rvts11"> localizado na pasta: \CORE\Packages\Delphi\D7</span></li>
+ <li value="9" class="rvps4"><span class="rvts11">Compile e instale esse pacote e agora o RDW deverá funcionar no D7 sem problemas.</span></li>
 </ol>
 <p></p>
-<p class="rvps4" style="clear: both;"><span class="rvts14">Created with the Personal Edition of HelpNDoc: </span><a class="rvts15" href="https://www.helpndoc.com/feature-tour/create-ebooks-for-amazon-kindle">Free Kindle producer</a></p>
+<p class="rvps5" style="clear: both;"><span class="rvts14">Created with the Personal Edition of HelpNDoc: </span><a class="rvts15" href="https://www.helpndoc.com/feature-tour/create-ebooks-for-amazon-kindle">Free Kindle producer</a></p>
 
             </div>
             
